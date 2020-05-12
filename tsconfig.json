@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+	"target": "es5",
+	"lib": ["es6", "dom", "es2017"],
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "dist/tsc.js",
+        "sourceMap": true
+    },
+    "include": [
+        "lib/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
