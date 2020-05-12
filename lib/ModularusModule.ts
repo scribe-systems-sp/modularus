@@ -9,7 +9,7 @@ export abstract class ModularusModule {
     pages?: Array<SPage>;
     views?: Array<SView>;
     translations?: any;
-    daemonize = false
+    daemonize: boolean = false
 
 
     beforeLoad() {
