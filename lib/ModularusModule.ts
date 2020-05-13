@@ -11,7 +11,7 @@ export abstract class ModularusModule {
     translations?: any;
     daemonize: boolean = false
     
-    abstract get version(): number;
+    abstract get version(): string;
     abstract get name(): string;
 
 
