@@ -10,6 +10,9 @@ export abstract class ModularusModule {
     views?: Array<SView>;
     translations?: any;
     daemonize: boolean = false
+    
+    abstract get version(): number;
+    abstract get name(): string;
 
 
     beforeLoad() {
