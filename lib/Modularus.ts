@@ -4,6 +4,7 @@ export interface Modularus {
     externals: any 
     baseURL: string
     moduleContexts: Map<String, any>
+    requestInterceptors: Array<any>
 
     loadModule(module: ModularusModule): Promise<boolean>
     loadModules(): Promise<boolean>
