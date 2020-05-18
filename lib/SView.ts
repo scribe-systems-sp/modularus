@@ -3,11 +3,11 @@ export class SView {
     neededPrivileges: Array<String>
     translationKey: string
     priority: number
-    routeKey: string
+    routeKey: Array<String>
     componentName: string
     parentKey: string
     
-    constructor(icon: string, translationKey: string, routeKey: string, priority: number, privileges: Array<String>, componentName: string, parentKey: string) {
+    constructor(icon: string, translationKey: string, routeKey: Array<string>, priority: number, privileges: Array<String>, componentName: string, parentKey: string) {
         this.icon = icon
         this.translationKey = translationKey
         this.priority = priority
@@ -16,5 +16,9 @@ export class SView {
         this.componentName = componentName
         this.parentKey = parentKey
     }
+
+    
+
+
 
 }
