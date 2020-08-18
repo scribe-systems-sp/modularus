@@ -6,5 +6,4 @@ export class ModularusComponent {
         this.name = name
         this.component = component
     }
-
 }

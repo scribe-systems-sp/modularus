@@ -7,5 +7,4 @@ export interface UserContext {
     addPrivilege(privilege: String): void
     putInformation(key: String, value: any): void
     hasPrivilege(privilege: String): boolean
-
 }

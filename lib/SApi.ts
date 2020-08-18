@@ -3,11 +3,14 @@ export abstract class SApi {
     abstract async isLoaded(): Promise<boolean>;
     abstract async loadApi(baseURL: string): Promise<void>;
     abstract async api(): Promise<any>;
-    async getClient(baseURL: string): Promise<any> {
-        let apiLoaded = await this.isLoaded();
+    async ensureLoaded(baseURL: string) {
+        const apiLoaded = await this.isLoaded();
         if(!apiLoaded) {
             await this.loadApi(baseURL)
         }
-        return await this.api();
+    }
+    async getClient(baseURL: string): Promise<any> {
+        await this.ensureLoaded(baseURL)
+        return await this.api()
     }
 }

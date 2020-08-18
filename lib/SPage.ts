@@ -14,6 +14,4 @@ export class SPage {
         this.routeKey = routeKey
         this.layoutComponentName = layoutComponentName
     }
-
-
 }

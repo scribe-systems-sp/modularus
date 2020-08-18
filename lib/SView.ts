@@ -16,9 +16,4 @@ export class SView {
         this.componentName = componentName
         this.parentKey = parentKey
     }
-
-    
-
-
-
 }

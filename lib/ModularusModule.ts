@@ -15,7 +15,6 @@ export abstract class ModularusModule {
     abstract get version(): string;
     abstract get name(): string;
 
-
     beforeLoad() {
 
     }
@@ -23,5 +22,4 @@ export abstract class ModularusModule {
     afterLoad() {
 
     }
-
 }
