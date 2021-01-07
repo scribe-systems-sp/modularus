@@ -1,6 +1,6 @@
 {
   "name": "@scribe-systems/modularus",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Modularus - interface for Scribe modules",
   "scripts": {
     "build": "tsc"
