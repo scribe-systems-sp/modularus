@@ -1,8 +1,8 @@
 import { PrivilegeExpression, PrivilegeValidationFunc } from './privilegeExpression'
 
-export type ValidationFunc = (value: string | PrivilegeExpression) => Promise<boolean>;
+export type ValidationFunc = (value: string | PrivilegeExpression) => boolean;
 
-export class FUNC implements PrivilegeExpression{
+export class FUNCClass implements PrivilegeExpression{
     private validationFunc: ValidationFunc
     private expressions: PrivilegeExpression | string
 
@@ -11,7 +11,9 @@ export class FUNC implements PrivilegeExpression{
         this.expressions = expressions
     }
     
-    async excecute(): Promise<boolean>{
-        return await this.validationFunc(this.expressions)
+    excecute(): boolean{
+        return this.validationFunc(this.expressions)
     }
 }
+
+export function FUNC(expressions: PrivilegeExpression | string, validationFunc: ValidationFunc): FUNCClass { return new FUNCClass(expressions, validationFunc) }
