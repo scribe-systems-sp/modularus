@@ -1,12 +1,14 @@
+import { PrivilegeExpression } from './privilegeExpressions/privilegeExpression'
+
 export class SPage {
     icon: string
-    neededPrivileges: Array<String>
+    neededPrivileges: Array<String | PrivilegeExpression>
     translationKey: string
     priority: number
     routeKey: string // must be unique
     layoutComponentName: string
     
-    constructor(icon: string, translationKey: string, routeKey: string, priority: number, privileges: Array<String>, layoutComponentName: string = "MainLayout") {
+    constructor(icon: string, translationKey: string, routeKey: string, priority: number, privileges: Array<String | PrivilegeExpression>, layoutComponentName: string = "MainLayout") {
         this.icon = icon
         this.translationKey = translationKey
         this.priority = priority
