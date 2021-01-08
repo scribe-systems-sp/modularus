@@ -10,11 +10,7 @@ export class ANDClass implements PrivilegeExpression{
     excecute(validationFunc: PrivilegeValidationFunc): boolean{
         let result = true
         for(const expression of this.expressions) {
-            if (typeof expression === 'string' || expression instanceof String) {
-                result = result && validationFunc(<string>expression)
-            } else {
-                result = result && (<PrivilegeExpression>expression).excecute(validationFunc)
-            }
+            result = result && validationFunc(expression)
             if (!result) return false
         }
         return result

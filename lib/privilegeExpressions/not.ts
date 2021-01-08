@@ -8,11 +8,7 @@ export class NOTClass implements PrivilegeExpression{
     }
     
     excecute(validationFunc: PrivilegeValidationFunc): boolean{
-        if (typeof this.expressions === 'string' || this.expressions instanceof String) {
-            return ! validationFunc(<string>this.expressions)
-        } else {
-            return ! (<PrivilegeExpression>this.expressions).excecute(validationFunc)
-        }
+        return ! validationFunc(this.expressions)
     }
 }
 

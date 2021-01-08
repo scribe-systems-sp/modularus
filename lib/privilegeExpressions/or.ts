@@ -10,12 +10,7 @@ export class ORClass implements PrivilegeExpression{
     excecute(validationFunc: PrivilegeValidationFunc): boolean{
         let result = false
         for(const expression of this.expressions) {
-            if (typeof expression === 'string' || expression instanceof String) {
-                result = result || validationFunc(<string>expression)
-            } else {
-                result = result || (<PrivilegeExpression>expression).excecute(validationFunc)
-            }
-            if (result) return true
+            result = result || validationFunc(expression)
         }
         return result
     }
