@@ -1,4 +1,4 @@
-import { SPage as SP } from "./SPage"
+import { SPage as SP, SPage } from "./SPage"
 import { SView as SV} from "./SView"
 import { SApi as SA} from "./SApi"
 import { UserContext as UC } from "./UserContext"

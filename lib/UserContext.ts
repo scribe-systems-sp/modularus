@@ -1,3 +1,5 @@
+import { PrivilegeExpression } from './privilegeExpressions/privilegeExpression'
+
 export interface UserContext {
     privileges: Array<String>
     name: String
@@ -6,5 +8,5 @@ export interface UserContext {
 
     addPrivilege(privilege: String): void
     putInformation(key: String, value: any): void
-    hasPrivilege(privilege: String): boolean
+    hasPrivilege(privilege: string | PrivilegeExpression): boolean
 }
