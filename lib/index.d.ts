@@ -8,8 +8,12 @@ export type Modularus = MRS;
 export { ModularusComponent } from "./ModularusComponent"
 export { ModularusModule } from "./ModularusModule"
 
-export { PrivilegeExpression, PrivilegeValidationFunc } from './privilegeExpressions/privilegeExpression'
+export { PrivilegeExpression } from './privilegeExpressions/privilegeExpression'
+import { PrivilegeValidationFunc as PVF } from './privilegeExpressions/privilegeExpression'
+export type PrivilegeValidationFunc = PVF;
 export { AND } from './privilegeExpressions/and'
 export { OR } from './privilegeExpressions/or'
 export { NOT } from './privilegeExpressions/not'
-export { FUNC, ValidationFunc } from './privilegeExpressions/func'
+export { FUNC } from './privilegeExpressions/func'
+import { ValidationFunc as VF } from './privilegeExpressions/func'
+export type ValidationFunc = VF;
