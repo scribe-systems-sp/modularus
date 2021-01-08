@@ -15,14 +15,14 @@ import { ValidationFunc as VF } from './privilegeExpressions/func'
 
 // Requires for sharing between modules
 namespace Modularus{
-    export type SPage = SP;
-    export type SView = SV;
-    export type SApi = SA;
-    export type UserContext = UC;
-    export type Modularus = MRS;
-    export type ModularusComponent = MC;
-    export type ModularusModule = MM;
-    export type PrivilegeExpression = PE;
+    export class SPage extends SP{}
+    export class SView extends SV{}
+    export abstract class SApi extends SA{}
+    export interface UserContext extends UC{}
+    export interface Modularus extends MRS{}
+    export class ModularusComponent extends MC{}
+    export abstract class ModularusModule extends MM{}
+    export abstract class PrivilegeExpression extends PE{}
     export type PrivilegeValidationFunc = PVF;
     export const AND = _AND;
     export const OR = _OR;
