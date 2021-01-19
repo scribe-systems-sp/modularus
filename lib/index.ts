@@ -1,6 +1,7 @@
 import { SPage as SP, SPage } from "./SPage"
 import { SView as SV} from "./SView"
 import { SApi as SA} from "./SApi"
+import { SGlobal as SG} from "./SGlobal"
 import { UserContext as UC } from "./UserContext"
 import { Modularus as MRS } from "./Modularus"
 import { ModularusComponent as MC } from "./ModularusComponent"
@@ -18,6 +19,7 @@ namespace Modularus{
     export class SPage extends SP{}
     export class SView extends SV{}
     export abstract class SApi extends SA{}
+    export class SGlobal extends SG{}
     export interface UserContext extends UC{}
     export interface Modularus extends MRS{}
     export class ModularusComponent extends MC{}
